@@ -25,6 +25,7 @@ By analyzing the source code, you can discover enterprise-grade patterns for:
 * **Orchestrating multi-container startups:** Fail-safe sequencing techniques that force dependent containers to wait gracefully until prerequisites are verified, resuming the container boot sequence only when the environment is fully ready.
 * **Decoupled inter-container configuration sharing:** Designing secure workflows to safely download and inject configuration files directly between running containers on the fly, eliminating configuration duplication and hardcoded values.
 * **Dynamic script execution:** A clean mechanism to scan a directory and execute shell scripts sequentially without ever hardcoding individual file names, maximizing script extensibility.
+* **Secured inter-container communication:** A robust solution to establish secure SSH and SFTP communication channels directly between the running containers.
 
 Whether you are modernizing a legacy system or designing a complex architecture from scratch, this repository serves as a practical, reusable guide for bulletproof container design.
 
