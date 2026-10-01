@@ -6,7 +6,7 @@ All notable changes to this project are documented in this file.
 ### Changed
 * Updated documentation and guides.
 * Cleaned up the repository by removing redundant assets, legacy files, and unused code blocks.
-* Changed project licensing to transition the repository to an open-source model.
+* Changed project licensing.
 
 ## [2.1.0] - 13/Dec/2022
 

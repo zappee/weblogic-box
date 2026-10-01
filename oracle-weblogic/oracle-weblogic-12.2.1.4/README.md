@@ -64,9 +64,7 @@ In this situation the following commands will help.
 ## 4) License
 Before the build, you must download the `Oracle JDK` install kit from the Oracle website and accept the license indicated on that page.
 
-Copyright (c) 2022 Remal Software, Arnold Somogyi. All rights reserved.
-
-BSD (2-clause) licensed
+Copyright (c) 2022-2026 Remal Software, Arnold Somogyi. All rights reserved.
 
 ## Appendix 1) Oracle WLST tool
 * Open a WLST console:

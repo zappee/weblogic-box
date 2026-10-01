@@ -4,8 +4,7 @@
 #  Since : February, 2021
 #  Author: Arnold Somogyi <arnold.somogyi@gmail.com>
 #
-#  Copyright (c) 2020-2021 Remal Software and Arnold Somogyi All rights reserved
-#  BSD (2-clause) licensed
+#  Copyright (c) 2020-2026 Remal Software and Arnold Somogyi All rights reserved
 # ******************************************************************************
 FROM tomcat:10.0
 LABEL authors="Arnold Somogyi <arnold.somogyi@gmail.com>"

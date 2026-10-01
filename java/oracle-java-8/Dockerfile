@@ -4,8 +4,7 @@
 #  Since : November, 2020
 #  Author: Arnold Somogyi <arnold.somogyi@gmail.com>
 #
-#  Copyright (c) 2020-2021 Remal Software and Arnold Somogyi All rights reserved
-#  BSD (2-clause) licensed
+#  Copyright (c) 2020-2026 Remal Software and Arnold Somogyi All rights reserved
 # ******************************************************************************
 FROM oraclelinux:7-slim
 LABEL authors="Arnold Somogyi <arnold.somogyi@gmail.com>"
@@ -65,7 +64,6 @@ RUN set -eux; \
 		[ ! -e "/usr/bin/$base" ]; \
 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; \
 	done; \
-	# -Xshare:dump will create a CDS archive to improve startup in subsequent runs
 	java -Xshare:dump; \
 	java -version; \
 	javac -version

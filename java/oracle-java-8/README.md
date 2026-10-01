@@ -45,8 +45,4 @@ $ ./build.sh
 ## 4) License
 Before the build, you must download the `Oracle JDK` install kit from the Oracle website and accept the license indicated on that page.
 
-Copyright (c) 2020-2022 Remal Software, Arnold Somogyi. All rights reserved.
-
-BSD (2-clause) licensed
-
-<a href="https://trackgit.com"><img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/kv444g8vf7bti919dcgk" alt="trackgit-views" /></a>
+Copyright (c) 2020-2026 Remal Software, Arnold Somogyi. All rights reserved.

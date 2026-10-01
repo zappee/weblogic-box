@@ -9,8 +9,7 @@
 #     $ ./build.sh           build the image locally
 #     $ ./build.sh true      build and push the image to the image registry
 #
-#  Copyright (c) 2020-2022 Remal Software and Arnold Somogyi All rights reserved
-#  BSD (2-clause) licensed
+#  Copyright (c) 2020-2026 Remal Software and Arnold Somogyi All rights reserved
 # ******************************************************************************
 DOCKER_REGISTRY="$1"
 DOCKER_REGISTRY_NAMESPACE="$2"
