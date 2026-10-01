@@ -64,9 +64,7 @@ In this situation the following commands will help.
 ## 4) License
 Before the build, you must download the `Oracle JDK` install kit from the Oracle website and accept the license indicated on that page.
 
-Copyright (c) 2022 Remal Software, Arnold Somogyi. All rights reserved.
-
-BSD (2-clause) licensed
+Copyright (c) 2022-2026 Remal Software, Arnold Somogyi. All rights reserved.
 
 ## Appendix 1) Oracle WLST tool
 * Open a WLST console:
@@ -78,5 +76,3 @@ BSD (2-clause) licensed
 * Connect to server
    * Online mode: `connect('weblogic', 'weblogic12', 't3://localhost:7001')`
    * Offline mode: `readDomain('/home/oracle/user_projects/domains/DEV_DOMAIN')`
-
-<a href="https://trackgit.com"><img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/kv444g8vf7bti919dcgk" alt="trackgit-views" /></a>

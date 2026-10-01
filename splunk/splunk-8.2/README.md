@@ -83,6 +83,4 @@ for i in {1..500}; do echo "$i: something good is happening now :)" >> $ORACLE_H
 ## 5) License
 Before the build, you must download the `Oracle JDK` install kit from the Oracle website and accept the license indicated on that page.
 
-Copyright (c) 2021 Remal Software, Arnold Somogyi. All rights reserved.
-
-BSD (2-clause) licensed
+Copyright (c) 2021-2026 Remal Software, Arnold Somogyi. All rights reserved.

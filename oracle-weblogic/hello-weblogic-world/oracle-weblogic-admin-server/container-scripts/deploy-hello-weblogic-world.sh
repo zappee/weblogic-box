@@ -5,8 +5,7 @@
 #  Since : Jun, 2022
 #  Author: Arnold Somogyi <arnold.somogyi@gmail.com>
 #
-#  Copyright (c) 2020-2022 Remal Software and Arnold Somogyi All rights reserved
-#  BSD (2-clause) licensed
+#  Copyright (c) 2020-2026 Remal Software and Arnold Somogyi All rights reserved
 # ******************************************************************************
 
 # ------------------------------------------------------------------------------
