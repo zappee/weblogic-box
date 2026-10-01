@@ -1,105 +1,49 @@
-# Remal Docker Images
+## ☁️ Containerized WebLogic Environment
 
-_keywords: automated deployment, docker, docker-compose, java, tomcat, weblogic_
+![GitHub top language](https://img.shields.io/github/languages/top/zappee/weblogic-box)
+![GitHub Issues](https://img.shields.io/github/issues/zappee/weblogic-box)
+![GitHub Release](https://img.shields.io/github/v/release/zappee/weblogic-box)
 
-## 1) Ready for use Remal Docker images
-* Java Docker Images
-  * [Oracle Java 8](/java/oracle-java-8)
+### 1) Overview
 
-
-* Apache-Tomcat Docker Images
-  * [Apache Tomcat](/apache-tomcat/apache-tomcat-10.0)
-
-
-* Database Docker Images
-    * [Oracle Database Enterprise 12.2.0.1](/database/oracle-database-enterprise-12.2.0.1)
+**WebLogic Box** is a pre-configured, isolated runtime environment designed to simplify Java EE application deployment on Oracle WebLogic Server without requiring complex local installations.
+It eliminates manual configuration bottlenecks by packaging the server environment inside a reproducible container blueprint.
 
 
-* Oracle WebLogic Docker Images
-  * [Oracle WebLogic 12.2.1.4](/oracle-weblogic/oracle-weblogic-12.2.1.4)
-  * [Oracle WebLogic 12.2.1.4 - administration server](/oracle-weblogic/oracle-weblogic-12.2.1.4-admin-server)
-  * [Oracle WebLogic 12.2.1.4 - managed server](/oracle-weblogic/oracle-weblogic-12.2.1.4-managed-server)
-  * [Hello WebLogic World: dockerization of a WebLogic application](/oracle-weblogic/hello-weblogic-world)
+### 2) A note on timeless architecture
 
+In today’s software development landscape, teams heavily favor lightweight, cloud-native frameworks like **Spring Boot** over traditional Java EE application servers.
+However, large enterprise environments (especially within the financial, governmental, and corporate sectors) still rely extensively on **Oracle WebLogic Server** to run core, business-critical applications.
 
-* Spluk Docker Images
-    * [Splunk 8.2 server](/splunk/splunk-8.2)
-    * [Oracle WebLogic administration server + Splunk forwarder](/splunk/oracle-weblogic-admin-server+splunk)
-    * [Oracle WebLogic managed server + Splunk forwarder](/splunk/oracle-weblogic-managed-server+splunk)
+The primary objective of **WebLogic Box** is not merely to build a legacy runtime environment, but to serve as a reference architecture.
+While the framework itself belongs to an older generation of technology, the containerization mechanisms engineered into these images are entirely **timeless and framework-agnostic**.
 
-## 2) Remal Docker image hierarchy
-   ![Remal Docker image hierarchy](docker-images.png)
+The architectural design and automation scripting can be directly applied to modern stacks (including Spring Boot) to solve complex container orchestration challenges.
 
-## 3) Contributing, improvements and bug report
-* Do you like organizing?
-* Do you like to code?
-* Do you like helping people?
-* Do you like helping others code?
-* Do you like fixing bugs?
+By analyzing the source code, you can discover enterprise-grade patterns for:
+* **Determining first-time Initialization:** Intelligent state checking that detects whether a container is booting up for the very first time or performing a routine restart, executing completely different execution paths dynamically.
+* **Orchestrating multi-container startups:** Fail-safe sequencing techniques that force dependent containers to wait gracefully until prerequisites are verified, resuming the container boot sequence only when the environment is fully ready.
+* **Decoupled inter-container configuration sharing:** Designing secure workflows to safely download and inject configuration files directly between running containers on the fly, eliminating configuration duplication and hardcoded values.
+* **Dynamic script execution:** A clean mechanism to scan a directory and execute shell scripts sequentially without ever hardcoding individual file names, maximizing script extensibility.
 
-Then please
-* Open an issue
-* Open a pull request
-* Contact with us
+Whether you are modernizing a legacy system or designing a complex architecture from scratch, this repository serves as a practical, reusable guide for bulletproof container design.
 
-Contact: [arnold.somogyi@gmail.com](mailto:arnold.somogyi@gmail.com)
+### 3) Image hierarchy
 
-## 4) License
-Before the build, you must download the `Oracle JDK` install kit from the Oracle website and accept the license indicated on that page.
+The project provides the following Docker images:
+* Java 8
+* Apache Tomcat 10.0
+* Oracle Database Enterprise 12.2.0.1
+* Oracle WebLogic 12.2.1.4 dmin and managed servers
+* Splunk 8.2 server
 
-Copyright (c) 2022 Remal Software, Arnold Somogyi. All rights reserved.
+![docker image hierarchy](/assets/images/menu/virtualization/docker/weblogic-box/docker-images.png)
 
-BSD (2-clause) licensed
+### 4) Source core
 
-## Appendix A) Docker cheat sheet
-* Start Docker daemon on Centos: `sudo systemctl start docker`
+[https://github.com/zappee/weblogic-box](https://github.com/zappee/weblogic-box)
 
+### 🤝 Contributing
 
-* Login to Docker Image Registry: `docker -v login https://docker-registry.example.com/v2`
-
-  
-* Logging
-  * Write log to file and screen: `docker logs -f <container-name> | tee output.log`
-  * Show only errors and warnings: `docker-compose logs -f | grep -i 'error\|invalid'`
-
-
-* Login to a container 
-  * As an ordinary user: `docker exec -it <container-name> /bin/bash`
-  * As root: `docker exec -it -u root -w /root <container-name> /bin/bash`
-
-
-* Run the image without executing the default `CMD` command: `docker run -d --name <container-name> <image-name>:<image-version> tail -f /dev/null`
-
-
-* Oracle Database in Docker
-  * Run: `docker run -p 1521:1521 --network="host" --name oracle-db store/oracle/database-enterprise:12.2.0.1`
-  * Port: `1521`
-  * Schema: `ORCLPDB1.localdomain`
-  * User: `SYS as SYSDBA`
-  * Password: `Oradoc_db1`
-
-
-* Container IP: `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-name>`
-
-
-* Docker clean-up
-  1. `docker info | grep "Docker Root Dir"`
-  2. `du -h --max-depth=1 <root-dir>`
-  3. `docker system df`
-     1. Containers info: `docker container ls --filter "status=exited" -aq` 
-     2. Clean-up docker containers: `docker container rm $(docker container ls --filter "status=exited" -aq)`
-     3. Delete unused images: `docker rmi $(docker image ls -aq)` 
-     4. Delete dangling images: `docker rmi $(docker image ls -aq --filter "dangling=true")`
-     5. Clean-up docker volumes: `docker volume rm $(docker volume ls -q)`
-     6. Cleanup docker networks: `docker network rm <NETWORK_ID>`
-     7. Docker prune: `docker system prune --volumes`
-
-## Appendix B) Useful Unix aliases
-* `alias ll="ls -all"`
-* `alias alias li="docker image ls | (sed -u 1q; sort -n -k1)"`
-* `alias lc="docker container ls -a"`
-* `alias cs='docker container stop $(docker container ls -a -q)'`
-* `alias rmc='docker container rm $(docker container ls -a -q)'`
-* `alias rmi='docker volume rm $(docker volume ls -qf dangling=true) ; docker rmi $(docker image ls -qf dangling=true)'`
-
-<a href="https://trackgit.com"><img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/kv444g8vf7bti919dcgk" alt="trackgit-views" /></a>
+Contributions, feature requests, optimization, and bug reports are always welcome!
+For more information, please visit my [homepage](https://zappee.github.io).
