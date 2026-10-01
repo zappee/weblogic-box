@@ -3,6 +3,7 @@
 All notable changes to this project are documented in this file.
 
 ## [2.2.0] - 02/Oct/2026
+
 ### Changed
 * Updated documentation and guides.
 * Cleaned up the repository by removing redundant assets, legacy files, and unused code blocks.
