@@ -4,7 +4,7 @@ All notable changes to this project are documented in this file.
 
 ## [2.2.0] - 02/Oct/2026
 
-### Changed
+#### Changed
 * Updated documentation and guides.
 * Cleaned up the repository by removing redundant assets, legacy files, and unused code blocks.
 * Changed project licensing.
@@ -19,5 +19,5 @@ All notable changes to this project are documented in this file.
 * Updated documentation and guides.
 * Optimized Splunk index size configuration limits.
 
-### [2.0.0] - 19/May/2022
+## [2.0.0] - 19/May/2022
 * Initial stable release, ready for use.
