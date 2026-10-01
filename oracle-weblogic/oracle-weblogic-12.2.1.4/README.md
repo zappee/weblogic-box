@@ -76,5 +76,3 @@ Copyright (c) 2022-2026 Remal Software, Arnold Somogyi. All rights reserved.
 * Connect to server
    * Online mode: `connect('weblogic', 'weblogic12', 't3://localhost:7001')`
    * Offline mode: `readDomain('/home/oracle/user_projects/domains/DEV_DOMAIN')`
-
-<a href="https://trackgit.com"><img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/kv444g8vf7bti919dcgk" alt="trackgit-views" /></a>

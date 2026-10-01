@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [weblogic-12.2.1.4:2.1.0] - 12/Dec/2022
+#### Modified
+* Using the latest java image as a base image.
+* Optimizing the environment variables definitions.
+
+## [weblogic-12.2.1.4:2.0.0] - 13/Jun/2022
+#### Modified
+* Use the latest `oracle-8:2.0.0` java image as a base image.
+* Optimize the unix environment variables defined in `Dockerfile`.
+* Improve the build bash script.
+
 ## [weblogic-12.2.1.4:1.0.0] - 11/Feb/2021
 #### Added
 * Remove dangling image after the image build.
@@ -10,14 +21,3 @@ All notable changes to this project will be documented in this file.
 * Copy the Oracle JDBC driver under the `$ORACLE_HOME/bin/oracle/` directory.
 * Install the Oracle JDBC Driver to the locale Maven repository.
 * Remove WebLogic installation kit after the installation. This reduces the Docker image size by 1 GB.
-
-## [weblogic-12.2.1.4:2.0.0] - 13/Jun/2022
-#### Modified
-* Use the latest `oracle-8:2.0.0` java image as a base image.
-* Optimize the unix environment variables defined in `Dockerfile`.
-* Improve the build bash script.
-
-## [weblogic-12.2.1.4:2.1.0] - 12/Dec/2022
-#### Modified
-* Using the latest java image as a base image.
-* Optimizing the environment variables definitions.
