@@ -4,6 +4,10 @@
 ![GitHub Issues](https://img.shields.io/github/issues/zappee/weblogic-box)
 ![GitHub Release](https://img.shields.io/github/v/release/zappee/weblogic-box)
 
+Like this project? Support our work by giving it a star on GitHub.
+
+![GitHub Repo stars](https://img.shields.io/github/stars/zappee/weblogic-box?style=flat)
+
 ### 1) Overview
 
 **WebLogic Box** is a pre-configured, isolated runtime environment designed to simplify Java EE application deployment on Oracle WebLogic Server without requiring complex local installations.
